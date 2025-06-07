@@ -4,12 +4,14 @@
     .grid
       NuxtLink.card(v-for="(p, i) in projects" :key="i" :to="`/projects/${p.slug}`")
         img(:src="getImageUrl(p.photos[0].name)" alt="Проект")
-        h3 {{ p.title }}
-        p {{ p.equipment }}
+        h3.title {{ p.title }}
+        p.equipment {{ p.equipment }}
         hr
-        small Тип работ: {{ p.works }}
+        span.works Тип работы:
+        span {{ p.works }}
         hr
-        small Заказчик: {{ p.customer }}
+        span.customer Заказчик:
+        span {{ p.customer }}
 </template>
 
 <script setup lang="ts">
@@ -27,20 +29,11 @@ const getImageUrl = (image: string) => {
 </script>
 
 <style scoped lang="scss">
-h3 {
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.projects {
-  margin-top: 20px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 90px;
 }
 .card {
   width: 377px;
@@ -51,6 +44,33 @@ h3 {
   justify-self: center;
   text-decoration: none;
   color: white;
+}
+
+.works, .customer {
+  opacity: 0.5;
+  margin-right: 6px;
+}
+
+.title {
+  margin-top: 37px;
+  margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.equipment {
+  line-height: 148%;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+hr {
+  margin: 17px 0px;
+}
+
+span {
+  font-size: 16px;
+  line-height: 148%;
 }
 
 img {
