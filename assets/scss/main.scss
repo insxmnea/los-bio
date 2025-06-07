@@ -1,0 +1,15 @@
+@use "utils/_variables";
+@use "utils/_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #00011a, #0f0f0f);
+  font-family: "Gilroy", sans-serif;
+  src: url("/fonts/Gilroy.otf") format("opentype");
+  color: variables.$white;
+}
