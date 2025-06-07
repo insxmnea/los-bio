@@ -33,6 +33,7 @@ const getImageUrl = (image: string) => {
 
 <style scoped lang="scss">
 @use 'assets/scss/utils/_variables';
+@use 'assets/scss/utils/_mixins';
 
 .container {
   margin: 0 auto;
@@ -43,6 +44,13 @@ const getImageUrl = (image: string) => {
   display: flex;
   justify-content: space-between;
   gap: 41px;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.for-tablet-landscape-up {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .images {

@@ -59,6 +59,7 @@ import IconOrderCallFilled from '~/assets/icons/order-call-filled.svg?component'
 
 <style scoped lang="scss">
 @use 'assets/scss/utils/_variables';
+@use 'assets/scss/utils/_mixins';
 
 .logo {
   width: 240px;
@@ -113,6 +114,15 @@ footer {
 .cols {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  @include mixins.for-tablet-portrait-up {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0px;
+  }
 }
 .col ul {
   list-style: none;

@@ -45,6 +45,7 @@ const getImageUrl = (image: SlideImage) => {
   
 <style scoped lang="scss">
 @use 'assets/scss/utils/_variables';
+@use 'assets/scss/utils/_mixins';
 
 .swiper-container {
   position: relative;
@@ -57,9 +58,15 @@ const getImageUrl = (image: SlideImage) => {
   display: flex;
   height: 100%;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
   box-sizing: content-box;
   margin: 0 auto;
+  flex-direction: column-reverse;
+
+  @include mixins.for-tablet-landscape-up {
+    padding: 0 10%;
+    flex-direction: row;
+  }
 }
 
 .text-content {
@@ -75,21 +82,33 @@ const getImageUrl = (image: SlideImage) => {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
   object-fit: contain;
+
+  @include mixins.for-tablet-landscape-up {
+    max-width: 100%;
+  }
 }
 
 .slide-title {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 700;
+
+  @include mixins.for-tablet-landscape-up {
+    font-size: 60px;
+  }
 }
 
 .slide-description {
   margin: 30px 0px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 150%;
   font-weight: 400;
   width: 423px;
+
+  @include mixins.for-tablet-landscape-up {
+    font-size: 20px;
+  }
 }
 
 .slide-button {

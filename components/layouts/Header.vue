@@ -45,6 +45,7 @@ import IconArrow from '~/assets/icons/arrow.svg?component';
 
 <style scoped lang="scss">
 @use 'assets/scss/utils/_variables';
+@use 'assets/scss/utils/_mixins';
 
 .icon {
   width: 24px;
@@ -67,6 +68,12 @@ import IconArrow from '~/assets/icons/arrow.svg?component';
   justify-content: space-between;
   font-size: 13px;
   opacity: 0.5;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.for-tablet-landscape-up {
+    flex-direction: row;
+  }
 }
 
 .item {
@@ -88,14 +95,29 @@ import IconArrow from '~/assets/icons/arrow.svg?component';
   align-items: center;
   max-width: variables.$content-width;
   margin: 18px auto;
+  flex-direction: column;
+
+  
+  @include mixins.for-tablet-landscape-up {
+    flex-direction: row;
+  }
 }
 
 ul {
   display: flex;
   list-style: none;
-  gap: 56px;
+  gap: 26px;
   font-size: 16px;
   font-weight: 400;
+  flex-direction: column;
+  margin: 20px 0px;
+  
+
+  @include mixins.for-tablet-landscape-up {
+    gap: 56px;
+    flex-direction: row;
+    margin: 0px;
+  }
 
   li {
     cursor: pointer;
