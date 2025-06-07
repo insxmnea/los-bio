@@ -13,3 +13,12 @@ body {
   src: url("/fonts/Gilroy.otf") format("opentype");
   color: variables.$white;
 }
+
+hr {
+  border: 1px solid rgba(#fff, 0.15);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+}
