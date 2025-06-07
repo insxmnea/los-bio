@@ -59,6 +59,7 @@ const getImageUrl = (image: SlideImage) => {
   align-items: center;
   padding: 0 10%;
   box-sizing: content-box;
+  margin: 0 auto;
 }
 
 .text-content {
