@@ -19,7 +19,7 @@ defineProps({
 })
 </script>
 
-<style module lang="scss">
+<style scope lang="scss">
 @use 'assets/scss/utils/_variables';
 
 section {
