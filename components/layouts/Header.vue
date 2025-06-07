@@ -18,7 +18,7 @@
         span Заказать звонок
     hr
     .container
-      IconLogo.logo(:fontControlled="false")
+      IconLogo.logo
       nav
         ul
           li
@@ -58,7 +58,6 @@ import IconArrow from '~/assets/icons/arrow.svg?component';
 
 .logo {
   width: 240px;
-  color: variables.$blue;
 }
 
 .top-bar {
