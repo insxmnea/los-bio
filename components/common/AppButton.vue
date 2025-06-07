@@ -6,7 +6,7 @@
 defineProps<{ text: string }>()
 </script>
 
-<style scoped lang="scss">
+<style module lang="scss">
 @use 'assets/scss/utils/_variables';
 
 button {
