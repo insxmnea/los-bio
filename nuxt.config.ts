@@ -4,4 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["nuxt-svgo"],
   css: ["@/assets/scss/main.scss"],
+  svgo: {
+    dts: true,
+  },
 });

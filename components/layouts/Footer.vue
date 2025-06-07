@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import IconLogo from '~/assets/icons/logo.svg';
+import IconLogo from '~/assets/icons/logo.svg?component';
 </script>
 
 <style scoped lang="scss">

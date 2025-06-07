@@ -63,7 +63,7 @@ const getImageUrl = (image: SlideImage) => {
 
 .text-content {
   flex: 1;
-  color: white;
+  color: variables.$white;
   max-width: 50%;
 }
 
@@ -74,7 +74,7 @@ const getImageUrl = (image: SlideImage) => {
 }
 
 img {
-  max-width: 500px;
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -99,7 +99,7 @@ img {
   text-decoration: none;
   border-radius: 12px;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 40px;

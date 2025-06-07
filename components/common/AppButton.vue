@@ -18,5 +18,11 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.1s ease;
+
+  &:hover {
+    background: variables.$blue-hover;
+  }
 }
 </style>
